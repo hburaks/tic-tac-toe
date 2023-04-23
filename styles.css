@@ -11,12 +11,40 @@ body {
 	justify-content: center;
 	height: 100vh;
 	margin: 0;
+	flex-direction: column;
 }
 
 .row {
 	display: flex;
 }
-
+.names {
+	display: flex;
+	justify-content: center;
+	width: calc(var(--cell-size) * 4);
+}
+form {
+	padding: 10px;
+}
+input {
+	width: 60px;
+	border: dashed 1px;
+	border-color: rgb(221, 221, 221);
+	padding: 5px 10px;
+}
+button {
+	margin-bottom: 10px;
+	border: none;
+	background-color: black;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.output {
+	display: flex;
+}
+.outputName {
+	padding: 5px 10px;
+}
 .cell {
 	width: var(--cell-size);
 	height: var(--cell-size);

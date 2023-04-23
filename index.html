@@ -9,6 +9,29 @@
 		<script type="module" defer src="script.js"></script>
 	</head>
 	<body>
+		<div class="names">
+			<form>
+				<input type="text" id="input-one" placeholder="Player X" />
+
+				<div id="output" style="display: none"></div>
+			</form>
+			<form>
+				<input type="text" id="input-second" placeholder="Player O" />
+			</form>
+		</div>
+		<button type="submit" id="submit-button">Submit</button>
+		<div class="output">
+			<div
+				class="outputName"
+				id="firstPlayerOutput"
+				style="display: none"
+			></div>
+			<div
+				class="outputName"
+				id="secondPlayerOutput"
+				style="display: none"
+			></div>
+		</div>
 		<div class="board" id="board">
 			<div class="row">
 				<div class="cell" data-cell></div>
