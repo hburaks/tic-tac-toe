@@ -18,9 +18,3 @@ submitButton.addEventListener("click", () => {
 	displayDom(inputSecond, outputSecond);
 	submitButton.style.display = "none";
 });
-
-// IF NO NAMES DEFAULT PLAYER X - PLAYER O
-
-// RE RENDER AFTER INPUT DISPLAY
-
-//
