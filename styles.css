@@ -23,38 +23,58 @@ body {
 .row {
 	display: flex;
 }
+
 .names-input {
-	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.question {
+	font-size: 25px;
 }
 form {
 	display: flex;
 	justify-content: center;
 }
 input {
-	width: 60px;
-	border: dashed 1px;
+	width: 120px;
+	height: 30px;
+	border: none;
 	border-color: rgb(221, 221, 221);
 	padding: 5px 10px;
 	margin: 5px 10px;
 	text-align: center;
 	border-radius: 5px;
+	font-size: 20px;
+}
+input::placeholder {
+	font-size: 20px;
 }
 button {
 	margin-bottom: 10px;
 	border: none;
-	background-color: black;
-	color: white;
-	padding: 5px 10px;
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+	margin: 10px;
 	border-radius: 5px;
+	font-size: 25px;
 }
 .header {
 	padding: 5px 10px;
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 30px;
 	color: rgb(67, 67, 67);
 }
 .output-name {
-	margin: 0px 15px;
+	margin: 15px;
 }
 
 .cell {
