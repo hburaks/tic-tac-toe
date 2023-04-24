@@ -1,6 +1,8 @@
-import displayDom from "./components/displayDom.js";
+import displayDom from "./components/displayNames,.js";
 import gameBoard from "./components/gameBoard.js";
 
+const namesInput = document.querySelector(".names-input");
+const header = document.querySelector(".header");
 const inputOne = document.getElementById("input-one");
 const inputSecond = document.getElementById("input-second");
 const submitButton = document.getElementById("submit-button");
@@ -16,5 +18,6 @@ for (let i = 0; i < myCell.length; i++) {
 submitButton.addEventListener("click", () => {
 	displayDom(inputOne, outputOne);
 	displayDom(inputSecond, outputSecond);
-	submitButton.style.display = "none";
+	namesInput.style.display = "none";
+	header.style.display = "flex";
 });

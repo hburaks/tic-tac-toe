@@ -6,30 +6,36 @@
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 body {
+	height: 100vh;
+	margin: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
-	margin: 0;
+}
+.container {
+	width: 600px;
+	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .row {
 	display: flex;
 }
-.names {
-	display: flex;
-	justify-content: center;
-	width: calc(var(--cell-size) * 4);
+.names-input {
+	text-align: center;
 }
 form {
-	padding: 10px;
+	display: flex;
+	justify-content: center;
 }
 input {
 	width: 60px;
 	border: dashed 1px;
 	border-color: rgb(221, 221, 221);
 	padding: 5px 10px;
+	margin: 5px 10px;
 	text-align: center;
 	border-radius: 5px;
 }
@@ -41,12 +47,16 @@ button {
 	padding: 5px 10px;
 	border-radius: 5px;
 }
-.output {
-	display: flex;
-}
-.outputName {
+.header {
 	padding: 5px 10px;
+	font-weight: 600;
+	font-size: 20px;
+	color: rgb(67, 67, 67);
 }
+.output-name {
+	margin: 0px 15px;
+}
+
 .cell {
 	width: var(--cell-size);
 	height: var(--cell-size);
