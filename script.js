@@ -1,6 +1,6 @@
-import displayDom from "./components/displayNames,.js";
-import gameBoard from "./components/gameBoard.js";
-
+import displayNames from "./components/displayNames,.js";
+import markTheCell from "./components/markTheCell.js";
+import Player from "./components/players.js";
 const namesInput = document.querySelector(".names-input");
 const header = document.querySelector(".header");
 const inputOne = document.getElementById("input-one");
@@ -9,15 +9,12 @@ const submitButton = document.getElementById("submit-button");
 const outputOne = document.getElementById("firstPlayerOutput");
 const outputSecond = document.getElementById("secondPlayerOutput");
 
-const myCell = document.querySelectorAll(".cell");
-for (let i = 0; i < myCell.length; i++) {
-	myCell[i].dataset.cell = "X";
-	myCell[i].innerText = myCell[i].dataset.cell;
-}
-
+const firstPlayer = new Player("Player X", "X");
+const secondPlayer = new Player("Player O", "O");
 submitButton.addEventListener("click", () => {
-	displayDom(inputOne, outputOne);
-	displayDom(inputSecond, outputSecond);
+	displayNames(inputOne, outputOne, "X");
+	displayNames(inputSecond, outputSecond, "O");
 	namesInput.style.display = "none";
 	header.style.display = "flex";
 });
+markTheCell();
