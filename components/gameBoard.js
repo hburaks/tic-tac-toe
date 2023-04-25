@@ -1,3 +1,5 @@
+import { cells } from "../script.js";
+
 const gameBoard = {
 	0: "",
 	1: "",

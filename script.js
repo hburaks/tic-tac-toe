@@ -25,6 +25,7 @@ export const secondPlayer = new Player(
 	score2
 );
 export const activePlayer = { activePlayer: firstPlayer };
+
 submitButton.addEventListener("click", () => {
 	displayNames(inputOne, outputOne, "X", firstPlayer);
 	displayNames(inputSecond, outputSecond, "O", secondPlayer);
