@@ -11,8 +11,8 @@ const inputSecond = document.getElementById("input-second");
 const submitButton = document.getElementById("submit-button");
 const outputOne = document.getElementById("firstPlayerOutput");
 const outputSecond = document.getElementById("secondPlayerOutput");
+const title = document.querySelector(".title");
 export const cells = document.querySelectorAll(".cell");
-
 export const firstPlayer = new Player(
 	inputOne.getAttribute("placeholder"),
 	"X"
@@ -26,6 +26,7 @@ submitButton.addEventListener("click", () => {
 	displayNames(inputOne, outputOne, "X", firstPlayer);
 	displayNames(inputSecond, outputSecond, "O", secondPlayer);
 	namesInput.style.display = "none";
+	title.style.color = "black";
 	header.style.display = "flex";
 });
 hoverCell();

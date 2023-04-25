@@ -19,7 +19,15 @@ body {
 	align-items: center;
 	justify-content: center;
 }
-
+.title {
+	font-size: 70px;
+	position: absolute;
+	top: 100px;
+	left: center;
+	color: rgb(255, 255, 255);
+	z-index: 1;
+	font-weight: 600;
+}
 .row {
 	display: flex;
 }
