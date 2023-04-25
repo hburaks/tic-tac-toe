@@ -22,7 +22,7 @@ body {
 .title {
 	font-size: 70px;
 	position: absolute;
-	top: 100px;
+	top: 8vh;
 	left: center;
 	color: rgb(255, 255, 255);
 	z-index: 1;
@@ -84,6 +84,9 @@ button {
 .output-name {
 	margin: 15px;
 }
+.player-container {
+	text-align: center;
+}
 
 .cell {
 	width: var(--cell-size);
@@ -92,6 +95,7 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 .row .cell:nth-child(2) {
 	border-right: 1px solid black;
