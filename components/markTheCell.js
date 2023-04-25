@@ -1,6 +1,7 @@
 import { cells, activePlayer } from "../script.js";
 import gameBoard from "./gameBoard.js";
 import toggleActivePlayer from "./toggleActivePlayer.js";
+import checkForWin from "./checkForWin.js";
 export default function markTheCell() {
 	cells.forEach((cell) => {
 		cell.addEventListener("click", () => {
@@ -10,6 +11,7 @@ export default function markTheCell() {
 				gameBoard[cell.dataset.index] = activePlayer.activePlayer.mark;
 				toggleActivePlayer(activePlayer);
 				cell.innerText = cell.dataset.cell;
+				console.log(checkForWin(gameBoard));
 			}
 		});
 	});
