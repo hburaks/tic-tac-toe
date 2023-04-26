@@ -6,4 +6,8 @@ export default function Player(name, mark, score) {
 		this.score++;
 		score.innerText = this.score;
 	};
+	this.resetScore = function () {
+		this.score = 0;
+		score.innerText = 0;
+	};
 }

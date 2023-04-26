@@ -14,7 +14,7 @@ const title = document.querySelector(".title");
 const score1 = document.querySelector(".score1");
 const score2 = document.querySelector(".score2");
 const restartGame = document.querySelector(".restart-game");
-
+const restart = document.querySelector(".restart");
 export const cells = document.querySelectorAll(".cell");
 export const firstPlayer = new Player(
 	inputOne.getAttribute("placeholder"),
@@ -38,6 +38,13 @@ submitButton.addEventListener("click", () => {
 });
 restartGame.addEventListener("click", () => {
 	resultContainer.style.display = "none";
+});
+restart.addEventListener("click", () => {
+	namesInput.style.display = "flex";
+	resultContainer.style.display = "none";
+	firstPlayer.resetScore();
+	aiPlayer.resetScore();
+	secondPlayer.resetScore();
 });
 hoverCell();
 markTheCell();
