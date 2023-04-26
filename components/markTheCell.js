@@ -10,7 +10,6 @@ export default function markTheCell() {
 	}
 	function renderGameBoard() {
 		cells.forEach((cell) => {
-			console.log(cell.dataset.cell);
 			cell.dataset.cell = gameBoard[cell.dataset.index];
 			if (cell.dataset.cell === "") {
 				cell.innerText = "";
@@ -28,7 +27,6 @@ export default function markTheCell() {
 			}
 			if (checkForWin(gameBoard)) {
 				clearCells();
-				console.log(gameBoard);
 				renderGameBoard();
 			}
 		});

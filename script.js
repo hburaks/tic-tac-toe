@@ -2,7 +2,7 @@ import displayNames from "./components/displayNames,.js";
 import markTheCell from "./components/markTheCell.js";
 import hoverCell from "./components/hoverCell.js";
 import Player from "./components/players.js";
-
+import { resultContainer } from "./components/checkForWin.js";
 const namesInput = document.querySelector(".names-input");
 const header = document.querySelector(".header");
 const inputOne = document.getElementById("input-one");
@@ -13,6 +13,8 @@ const outputSecond = document.getElementById("secondPlayerOutput");
 const title = document.querySelector(".title");
 const score1 = document.querySelector(".score1");
 const score2 = document.querySelector(".score2");
+const restartGame = document.querySelector(".restart-game");
+
 export const cells = document.querySelectorAll(".cell");
 export const firstPlayer = new Player(
 	inputOne.getAttribute("placeholder"),
@@ -24,6 +26,7 @@ export const secondPlayer = new Player(
 	"O",
 	score2
 );
+export const aiPlayer = new Player("Computer", "0", score2);
 export const activePlayer = { activePlayer: firstPlayer };
 
 submitButton.addEventListener("click", () => {
@@ -33,11 +36,8 @@ submitButton.addEventListener("click", () => {
 	title.style.color = "black";
 	header.style.display = "flex";
 });
+restartGame.addEventListener("click", () => {
+	resultContainer.style.display = "none";
+});
 hoverCell();
 markTheCell();
-score1.addEventListener("click", () => {
-	firstPlayer.updateScore();
-});
-score2.addEventListener("click", () => {
-	secondPlayer.updateScore();
-});

@@ -83,6 +83,9 @@ button:hover {
 		box-shadow 0.6s ease-in-out;
 	box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
 }
+.result {
+	font-size: 30px;
+}
 .header {
 	padding: 5px 10px;
 	font-weight: 600;
