@@ -15,6 +15,9 @@ const score1 = document.querySelector(".score1");
 const score2 = document.querySelector(".score2");
 const restartGame = document.querySelector(".restart-game");
 const restart = document.querySelector(".restart");
+const friend = document.querySelector("#friend");
+const opponentSelector = document.querySelector(".opponent-selector");
+const formContainer = document.querySelector("#form-container");
 export const cells = document.querySelectorAll(".cell");
 export const firstPlayer = new Player(
 	inputOne.getAttribute("placeholder"),
@@ -32,7 +35,7 @@ export const activePlayer = { activePlayer: firstPlayer };
 submitButton.addEventListener("click", () => {
 	displayNames(inputOne, outputOne, "X", firstPlayer);
 	displayNames(inputSecond, outputSecond, "O", secondPlayer);
-	namesInput.style.display = "none";
+	formContainer.style.display = "none";
 	title.style.color = "black";
 	header.style.display = "flex";
 });
@@ -45,6 +48,14 @@ restart.addEventListener("click", () => {
 	firstPlayer.resetScore();
 	aiPlayer.resetScore();
 	secondPlayer.resetScore();
+});
+friend.addEventListener("click", () => {
+	// namesInput.forEach((nameInput) => {
+	// 	nameInput.style.display = "flex";
+	// });
+	formContainer.style.display = "flex";
+	console.log(namesInput);
+	opponentSelector.style.display = "none";
 });
 hoverCell();
 markTheCell();

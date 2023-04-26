@@ -11,8 +11,16 @@
 	<body>
 		<div class="container">
 			<div class="title">TicTacToe</div>
-			<div class="names-input">
-				<div class="question">Please type your name</div>
+			<div class="names-input opponent-selector">
+				<div class="question">Select your opponent</div>
+
+				<div>
+					<button type="submit" id="friend">Friend</button>
+					<button type="submit" id="computer">Computer</button>
+				</div>
+			</div>
+			<div class="names-input" id="form-container" style="display: none">
+				<div class="question">Type your name</div>
 				<form>
 					<input type="text" id="input-one" placeholder="Player X" />
 					<input type="text" id="input-second" placeholder="Player O" />
@@ -27,7 +35,6 @@
 					RESTART
 				</button>
 			</div>
-
 			<div class="header" style="display: none">
 				<div class="player-container">
 					<div class="output-name" id="firstPlayerOutput"></div>
