@@ -1,29 +1,28 @@
 import { firstPlayer, secondPlayer } from "../script.js";
 const resultGame = document.querySelector(".result");
 export const resultContainer = document.querySelector("#result-container");
-
-export default function checkForWin(gameBoard) {
-	function roundResult(i) {
-		resultContainer.style.display = "flex";
-		if (gameBoard[i] === "X") {
-			resultGame.innerText = `${firstPlayer.name} won the round`;
-		}
-		if (gameBoard[i] === "O") {
-			resultGame.innerText = `${secondPlayer.name} won the round`;
-		}
-		if (i === "tie") {
-			resultGame.innerText = "It is a tie";
-		}
+import gameBoard from "./gameBoard.js";
+function roundResult(i) {
+	resultContainer.style.display = "flex";
+	if (gameBoard[i] === "X") {
+		resultGame.innerText = `${firstPlayer.name} won the round`;
 	}
-	function whoWins(i) {
-		if (gameBoard[i] === "X") {
-			firstPlayer.updateScore();
-		}
-		if (gameBoard[i] === "O") {
-			secondPlayer.updateScore();
-		}
+	if (gameBoard[i] === "O") {
+		resultGame.innerText = `${secondPlayer.name} won the round`;
 	}
-
+	if (i === "tie") {
+		resultGame.innerText = "It is a tie";
+	}
+}
+function whoWins(i) {
+	if (gameBoard[i] === "X") {
+		firstPlayer.updateScore();
+	}
+	if (gameBoard[i] === "O") {
+		secondPlayer.updateScore();
+	}
+}
+export default function checkForWin() {
 	for (let i = 0; i < 9; i = i + 3) {
 		if (
 			gameBoard[i] === gameBoard[i + 1] &&
@@ -75,4 +74,3 @@ export default function checkForWin(gameBoard) {
 	roundResult("tie");
 	return true;
 }
-// [cell.dataset.index];
