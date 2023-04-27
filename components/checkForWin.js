@@ -1,4 +1,9 @@
-import { firstPlayer, secondPlayer } from "../script.js";
+import {
+	firstPlayer,
+	secondPlayer,
+	outputSecond,
+	aiPlayer
+} from "../script.js";
 const resultGame = document.querySelector(".result");
 export const resultContainer = document.querySelector("#result-container");
 import gameBoard from "./gameBoard.js";
@@ -7,7 +12,10 @@ function roundResult(i) {
 	if (gameBoard[i] === "X") {
 		resultGame.innerText = `${firstPlayer.name} won the round`;
 	}
-	if (gameBoard[i] === "O") {
+	if (gameBoard[i] === "O" && outputSecond.innerText === "Computer") {
+		resultGame.innerText = `${aiPlayer.name} won the round`;
+	}
+	if (gameBoard[i] === "O" && outputSecond.innerText !== "Computer") {
 		resultGame.innerText = `${secondPlayer.name} won the round`;
 	}
 	if (i === "tie") {
