@@ -18,6 +18,7 @@ const restartGame = document.querySelector(".restart-game");
 const restart = document.querySelector(".restart");
 const friend = document.querySelector("#friend");
 const computer = document.querySelector("#computer");
+const toughComputer = document.querySelector("#tough-computer");
 const opponentSelector = document.querySelector(".opponent-selector");
 const formContainer = document.querySelector("#form-container");
 export const cells = document.querySelectorAll(".cell");
@@ -31,8 +32,9 @@ export const secondPlayer = new Player(
 	"O",
 	score2
 );
-export const aiPlayer = new Player("Computer", "0", score2);
+export const aiPlayer = new Player("Computer", "O", score2);
 export const activePlayer = { activePlayer: firstPlayer };
+const buttonContainer = document.querySelector(".button-container");
 
 submitButton.addEventListener("click", () => {
 	displayNames(inputOne, outputOne, "X", firstPlayer);
@@ -67,6 +69,16 @@ computer.addEventListener("click", () => {
 	inputSecond.style.display = "none";
 	outputSecond.dataset.ai = "1";
 	outputSecond.innerText = "Computer";
+});
+toughComputer.addEventListener("click", () => {
+	buttonContainer.style.display = "none";
+	namesInput.innerText = "in Progress, please refresh the page";
+
+	// formContainer.style.display = "flex";
+	// opponentSelector.style.display = "none";
+	// inputSecond.style.display = "none";
+	// outputSecond.dataset.ai = "2";
+	// outputSecond.innerText = "Computer";
 });
 hoverCell();
 markTheCell();
