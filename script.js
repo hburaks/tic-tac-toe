@@ -45,8 +45,10 @@ submitButton.addEventListener("click", () => {
 });
 restartGame.addEventListener("click", () => {
 	resultContainer.style.display = "none";
+	activePlayer.activePlayer = firstPlayer;
 });
 restart.addEventListener("click", () => {
+	activePlayer.activePlayer = firstPlayer;
 	namesInput.style.display = "flex";
 	resultContainer.style.display = "none";
 	firstPlayer.resetScore();
