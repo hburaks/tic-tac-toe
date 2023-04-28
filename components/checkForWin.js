@@ -12,10 +12,10 @@ function roundResult(i) {
 	if (gameBoard[i] === "X") {
 		resultGame.innerText = `${firstPlayer.name} won the round`;
 	}
-	if (gameBoard[i] === "O" && outputSecond.innerText === "Computer") {
+	if (gameBoard[i] === "O" && outputSecond.dataset.ai === "0") {
 		resultGame.innerText = `${aiPlayer.name} won the round`;
 	}
-	if (gameBoard[i] === "O" && outputSecond.innerText !== "Computer") {
+	if (gameBoard[i] === "O" && outputSecond.dataset.ai === "1") {
 		resultGame.innerText = `${secondPlayer.name} won the round`;
 	}
 	if (i === "tie") {

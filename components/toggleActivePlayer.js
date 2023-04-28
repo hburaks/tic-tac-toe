@@ -2,7 +2,7 @@ import { aiPlayer, firstPlayer, secondPlayer } from "../script.js";
 import { outputSecond } from "../script.js";
 import computerMove from "./computerMove.js";
 export default function toggleActivePlayer(activePlayer) {
-	if (outputSecond.innerText === "Computer") {
+	if (outputSecond.dataset.ai === "1") {
 		if (activePlayer.activePlayer === firstPlayer) {
 			activePlayer.activePlayer = aiPlayer;
 			computerMove();

@@ -57,11 +57,13 @@ friend.addEventListener("click", () => {
 	formContainer.style.display = "flex";
 	opponentSelector.style.display = "none";
 	inputSecond.style.display = "flex";
+	outputSecond.dataset.ai = "0";
 });
 computer.addEventListener("click", () => {
 	formContainer.style.display = "flex";
 	opponentSelector.style.display = "none";
 	inputSecond.style.display = "none";
+	outputSecond.dataset.ai = "1";
 	outputSecond.innerText = "Computer";
 });
 hoverCell();
